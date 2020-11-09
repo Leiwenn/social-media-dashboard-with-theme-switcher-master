@@ -1,0 +1,61 @@
+
+
+.container {
+    color: #636579;
+}
+.dark, h1, h2 {
+    color: #1B1E27;
+}
+
+.card {
+    background: #F0F3FA;
+    border: none;
+}
+.card:hover {
+    background: #E1E3EF;
+}
+.card .instagram:hover {
+
+}
+
+.followers .card {
+    padding: 2;
+}
+.followers .card-link {
+    color: #303030;
+}
+.followers img {
+    object-fit: contain;
+}
+.facebook {
+    border-top: 3px solid #2C8FE5;
+}
+.twitter {
+    border-top: 3px solid #329EE3;
+}
+.instagram {
+    padding-top: 3px;
+    background: linear-gradient(to right, #FBBE6D 0%, #E28A8A 50%, #E05B8F 100%);
+}
+.instagram .card-text, .instagram .card-body {
+    background: #F0F3FA;
+}
+.youtube {
+    border-top: 3px solid #BF042C;
+}
+.up {
+    color: #56A999;
+}
+.down {
+    color: #BD5765;
+}
+
+
+
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
