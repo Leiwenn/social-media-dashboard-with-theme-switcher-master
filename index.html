@@ -5,32 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/f2c3a49501.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="public/css/style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon-32x32.png">
   <title>Frontend Mentor | social-media-dashboard-with-theme-switcher-master</title>
 </head>
 <body>
-  <div class="container">
-    <header class="d-flex justify-content-between pt-4 pb-4">
+  <div class="container-fluid mx-auto">
+    <header class="d-flex justify-content-between flex-column flex-md-row">
       <div>
         <h1>Social Media Dashboard</h1>
         <p>Total Followers: 23,004</p>
       </div>
-      <div class="pt-4 pb-4">
-        <label for="toogle">Dark Mode</label>
-        <button id="toogle">ici le toogle</button>
+      <div class="pt-4 pb-4 d-flex justify-content-between align-item-center toogleBorder">
+          <p class="mr-2">Dark Mode</p>
+          <label class="switch" for="customSwitch">
+            <input type="checkbox" role="switch" name="switch" id="customSwitch" >
+            <span class="slider round"></span>
+          </label>
       </div>
     </header>
 
     <section class="card-deck followers">
       <div class="card text-center facebook">
-        <div class="card-text d-flex justify-content-center align-item-center pt-3">
+        <div class="card-text d-flex justify-content-center align-item-center pt-4">
           <img class="img-fluid" src="public/images/icon-facebook.svg" />
           <a href="#" class="stretched-link ml-2 card-link">@nathanf</a>
         </div>
         <div class="card-body">
           <h2 class="card-title">1987</h2>
-          <p class="card-text">Followers</p>
+          <p class="card-text follow">FOLLOWERS</p>
         </div>
         <div class="card-text d-flex justify-content-center">
           <p><i class="fas fa-sort-up up mt-2"></i></p>
@@ -38,41 +43,43 @@
         </div>
       </div>
       <div class="card text-center twitter">
-        <div class="card-text d-flex justify-content-center align-item-center pt-3">
+        <div class="card-text d-flex justify-content-center align-item-center pt-4">
           <img class="img-fluid" src="public/images/icon-twitter.svg" />
           <a href="#" class="stretched-link ml-2 card-link">@nathanf</a>
         </div>
         <div class="card-body">
           <h2 class="card-title">1044</h2>
-          <p class="card-text">Followers</p>
+          <p class="card-text follow">FOLLOWERS</p>
         </div>
         <div class="card-text text-center d-flex justify-content-center">
           <p><i class="fas fa-sort-up up mt-2"></i></p>
           <p class="up ml-1">99 Today</p>
         </div>
       </div>
-      <div class="card text-center instagram">
-        <div class="card-text d-flex justify-content-center align-item-center pt-3">
-          <img class="img-fluid" src="public/images/icon-instagram.svg" />
-          <a href="#" class="stretched-link ml-2 card-link">@realnathanf</a>
-        </div>
-        <div class="card-body">
-          <h2 class="card-title">11k</h2>
-          <p class="card-text">Followers</p>
-        </div>
-        <div class="card-text text-center d-flex justify-content-center">
-          <p><i class="fas fa-sort-up up mt-2"></i></p>
-          <p class="up ml-1">1099 Today</p>
+      <div class="borderInsta card">
+        <div class="text-center instagram card">
+          <div class="card-text d-flex justify-content-center align-item-center pt-4">
+            <img class="img-fluid" src="public/images/icon-instagram.svg" />
+            <a href="#" class="stretched-link ml-2 card-link">@realnathanf</a>
+          </div>
+          <div class="card-body">
+            <h2 class="card-title">11k</h2>
+            <p class="card-text follow">FOLLOWERS</p>
+          </div>
+          <div class="card-text text-center d-flex justify-content-center">
+            <p><i class="fas fa-sort-up up mt-2"></i></p>
+            <p class="up ml-1">1099 Today</p>
+          </div>
         </div>
       </div>
       <div class="card text-center youtube">
-        <div class="card-text d-flex justify-content-center align-item-center pt-3">
+        <div class="card-text d-flex justify-content-center align-item-center pt-4">
           <img class="img-fluid" src="public/images/icon-youtube.svg" />
           <a href="#" class="stretched-link ml-2 card-link">Nathan F.</a>
         </div>
         <div class="card-body">
           <h2 class="card-title">8239</h2>
-          <p class="card-text">Subscribers</p>
+          <p class="card-text follow">SUBSCRIBERS</p>
         </div>
         <div class="card-text d-flex justify-content-center align-item-center">
           <p><i class="fas fa-sort-down down d-flex justify-content-center align-item-center"></i></p>
@@ -81,9 +88,9 @@
       </div>
     </section>
 
-    <section>
-      <h3>Overview - Today</h3>
-      <div class="card-deck">
+    <section class="today">
+      <h3 class="mt-5 mb-4">Overview - Today</h3>
+      <div class="card-deck overview">
         <div class="card text-center pt-3 pl-3 pr-3">
           <div class="card-text d-flex justify-content-between">
             <p>Page Views</p>
@@ -91,7 +98,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">87</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-up up mt-2"></i></p>
               <p class="up ml-1">3%</p>
             </div>
@@ -104,7 +111,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">52</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-down down d-flex justify-content-center align-item-center"></i></p>
               <p class="down ml-1">2%</p>
             </div>
@@ -117,7 +124,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">5462</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-up up mt-2"></i></p>
               <p class="up ml-1">2257%</p>
             </div>
@@ -130,14 +137,14 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">52k</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-up up mt-2"></i></p>
               <p class="up ml-1">1375%</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="card-deck mt-4">
+      <div class="card-deck overview mt-4">
         <div class="card text-center pt-3 pl-3 pr-3">
           <div class="card-text d-flex justify-content-between">
             <p>Retweets</p>
@@ -145,7 +152,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">117</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-up up mt-2"></i></p>
               <p class="up ml-1">303%</p>
             </div>
@@ -158,7 +165,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">507</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-up up mt-2"></i></p>
               <p class="up ml-1">553%</p>
             </div>
@@ -171,7 +178,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">107</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-down down d-flex justify-content-center align-item-center"></i></p>
               <p class="down ml-1">19%</p>
             </div>
@@ -184,7 +191,7 @@
           </div>
           <div class="card-text d-flex justify-content-between">
             <p class="dark">1407</p>
-            <div class="d-flex justify-content-center align-item-center">
+            <div class="d-flex justify-content-center align-item-center percent">
               <p><i class="fas fa-sort-down down d-flex justify-content-center align-item-center"></i></p>
               <p class="down ml-1">12%</p>
             </div>
@@ -199,5 +206,9 @@
     </div>
 
   </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="switch.js"></script>
 </body>
 </html>
